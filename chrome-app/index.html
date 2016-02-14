@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Keep Talking</title>
+	
+	<link rel="stylesheet" type="text/css" href="core/framework.css">
+	<link rel="stylesheet" type="text/css" href="core/loader.css">
+
+	<script src="core/jquery/jquery-2.1.0.min.js"></script>
+	<script src="core/jquery/jquery.nouislider.min.js"></script>
+	<script src="core/jquery/jquery.knob.js"></script>
+	<script src="core/jquery/insQ.min.js"></script>
+	<script src="core/involt.js"></script>
+	<script src="core/framework.js"></script> 
+</head>
+
+<body>
+	<style>
+		body {
+			height: 700px;
+			width: 1000px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#Screen-Container {
+			display: flex;
+			height: 600px;
+			width: 900px;
+			justify-content: center;
+			align-items: center;
+			/*justify-content: space-between;	*/
+			background-color: beige;
+		}
+
+		#Controller-Container {
+			margin-top: 10px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#Start-Game{
+			align-self: center;
+		}
+
+		#Content {
+			align-self: center;
+		}
+
+	</style>
+
+
+	<div id="Content">
+		<div id="Timer">
+			<div id="watch">0</div> sec
+		</div>
+
+		<div id="Screen-Container">
+			<button id="Start-Game">Begin</button>
+
+			<div id="Game-1" class="screen">
+				Game 1
+				<div class="ard toggle D5 0"></div>
+			</div>
+
+			<div id="Game-2" class="screen">
+				Game 2
+				<div class="ard show A0"></div>
+				<div class="ard show A1"></div>
+			</div>	
+
+			<div id="Game-3" class="screen">
+				Game 3
+				<div class="ard toggle D5 0"></div>
+			</div>	
+		</div>
+		<div id="Controller-Container">
+			<button id="1" class="sbtn" >1</button>
+			<button id="2" class="sbtn" >2</button>
+			<button id="3" class="sbtn" >3</button>
+		</div>
+	</div>
+	<script src="gamestate.js"></script>
+</body>
+
+</html>

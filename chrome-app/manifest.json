@@ -1,0 +1,30 @@
+{
+  //Basic info (you can change it)
+  "name": "Involt",
+  "description": "Arduino to HTML prototyping framework for designers.",
+  "author": "Involt, Ernest Warzocha",
+  "version": "1.0.6",
+  
+  //Requied
+  "permissions": ["serial"],
+
+  "bluetooth": {
+    "uuids": [ "00001101-0000-1000-8000-00805f9b34fb" ],
+    "socket": true
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["core/background.js"]
+    }
+  },
+
+  "icons": { "16": "icons/icon16.png",
+             "48": "icons/icon48.png",
+            "128": "icons/icon128.png" },
+
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "minimum_chrome_version": "33"
+
+}
