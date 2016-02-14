@@ -39,17 +39,19 @@ String fname;
 void setup() {
   //Bitrate must remain same as in app.
   Serial.begin(57600);
+  pinMode(5, OUTPUT);
 }
 
 
 void loop() {
   //receive data from your app, do not remove this line.
   involtReceive();
-  
-  //ADD YOUR CODE HERE
-  
-  //clear the fname to prevent from duplicating functions
-  fname = "";
+  //  digitalWrite(5, involtDigital[5]);
+
+  involtSend(0, analogRead(A0));
+  delay(2);
+  involtSend(1, analogRead(A1));
+  delay(2);
 }
 
 //----------------------
