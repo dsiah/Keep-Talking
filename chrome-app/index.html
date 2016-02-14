@@ -26,12 +26,11 @@
 		}
 
 		#Screen-Container {
-			display: flex;
-			height: 600px;
 			width: 900px;
-			justify-content: center;
+			height: 600px;
+			display: flex;
 			align-items: center;
-			/*justify-content: space-between;	*/
+			justify-content: center;
 			background-color: beige;
 		}
 
@@ -61,28 +60,44 @@
 			<button id="Start-Game">Begin</button>
 
 			<div id="Game-1" class="screen">
-				Game 1
+				Simon Says
 				<div class="ard toggle D5 0"></div>
 			</div>
 
 			<div id="Game-2" class="screen">
-				Game 2
-				<div class="ard show A0"></div>
-				<div class="ard show A1"></div>
+				Safecracking
+
+				<div id="111" class="ard value A0"></div>
+				<div class="ard value A1"></div>
+				<div class="ard value A2"></div>
+				<div class="ard value A3"></div>
+				<div class="ard value A4"></div>
+				<div class="ard value A5"></div>
 			</div>	
 
 			<div id="Game-3" class="screen">
-				Game 3
+				Morse Decoder
 				<div class="ard toggle D5 0"></div>
+				<!-- <div class="ard "></div> -->
 			</div>	
 		</div>
+
 		<div id="Controller-Container">
-			<button id="1" class="sbtn" >1</button>
-			<button id="2" class="sbtn" >2</button>
-			<button id="3" class="sbtn" >3</button>
+			<button id="1" class="sbtn">1</button>
+			<button id="2" class="sbtn">2</button>
+			<button id="3" class="sbtn">3</button>
 		</div>
 	</div>
+
 	<script src="gamestate.js"></script>
+
+	<!-- Game 1 -->
+	<script src="Simon.js"></script>
+	<!-- Game 2 -->
+	<script src="Safecracker.js"></script>
+	<!-- Game 3 -->
+	<script src="MorseDecoder.js"></script>
+
 </body>
 
 </html>

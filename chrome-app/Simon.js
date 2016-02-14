@@ -1,0 +1,1 @@
+var lost = false, won = false, strikes = 0;
