@@ -48,6 +48,10 @@
 			align-self: center;
 		}
 
+		.game-2-info {
+			display: flex;
+		}
+
 	</style>
 
 
@@ -65,16 +69,28 @@
 			</div>
 
 			<div id="Game-2" class="screen">
-				Safecracking
 				<img src="img/safecracker.png" height="350">
+				<div class="game-2-info">
 				<div class="ard value A13"></div>
+				<div>
+					Safe 1: <div id="safe-dis1"></div>
+				</div>
 				<div class="ard value A14"></div>
+				<div>
+					Safe 2: <div id="safe-dis2"></div>
+				</div>
 				<div class="ard value A15"></div>
-				<div class="ard value A16"></div> 
+				<div>
+					Safe 3: <div id="safe-dis3"></div>
+				</div>
+				<div class="ard value A16"></div>
+				<div>
+					Progress: <div id="safe-progress"></div>
+				</div>
+				</div>
 			</div>	
 
 			<div id="Game-3" class="screen">
-				Morse Decoder
 				<img src="img/morsedecoder.png" height="350">
 				<div class="ard toggle D5 0"></div>
 			</div>	
