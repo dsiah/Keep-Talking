@@ -17,27 +17,19 @@
 
 <body>
 	<style>
-		body {
-			height: 700px;
-			width: 1000px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 
 		#Screen-Container {
-			width: 900px;
+			width: inherit;
 			height: 600px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background-color: beige;
 		}
 
 		#Controller-Container {
 			margin-top: 10px;
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
 		}
 
 		#Start-Game{
@@ -50,6 +42,19 @@
 
 		.game-2-info {
 			display: flex;
+			justify-content: center;
+			font-size: 25px;
+		}
+
+		#Timer {
+			display: flex;
+    		justify-content: center;
+    		font-size: 30px;
+		}
+
+		.winsplash {
+			background-color: green;
+			color: white;
 		}
 
 	</style>
@@ -57,33 +62,33 @@
 
 	<div id="Content">
 		<div id="Timer">
-			<div id="watch">0</div> sec
+			<div id="watch">300</div> sec
 		</div>
+
+
 
 		<div id="Screen-Container">
 			<button id="Start-Game">Begin</button>
-
 			<div id="Game-1" class="screen">
 				<img src="img/simonsays.png" height="350">
-				<div class="ard toggle D5 0"></div>
 			</div>
 
 			<div id="Game-2" class="screen">
 				<img src="img/safecracker.png" height="350">
 				<div class="game-2-info">
-				<div class="ard value A13"></div>
+				<div class="ard value A17"></div>
 				<div>
 					Safe 1: <div id="safe-dis1"></div>
 				</div>
-				<div class="ard value A14"></div>
+				<div class="ard value A18"></div>
 				<div>
 					Safe 2: <div id="safe-dis2"></div>
 				</div>
-				<div class="ard value A15"></div>
+				<div class="ard value A19"></div>
 				<div>
 					Safe 3: <div id="safe-dis3"></div>
 				</div>
-				<div class="ard value A16"></div>
+				<div class="ard value A20"></div>
 				<div>
 					Progress: <div id="safe-progress"></div>
 				</div>
@@ -92,7 +97,6 @@
 
 			<div id="Game-3" class="screen">
 				<img src="img/morsedecoder.png" height="350">
-				<div class="ard toggle D5 0"></div>
 			</div>	
 		</div>
 
@@ -100,13 +104,12 @@
 			<button id="1" class="sbtn">1</button>
 			<button id="2" class="sbtn">2</button>
 			<button id="3" class="sbtn">3</button>
+			<button id="stopbtn" style="display: none;">Stop</button>
 		</div>
 	</div>
 
 	<script src="gamestate.js"></script>
 
-	<!-- Game 1 -->
-	<script src="Simon.js"></script>
 	<!-- Game 2 -->
 	<script src="Safecracker.js"></script>
 	<!-- Game 3 -->

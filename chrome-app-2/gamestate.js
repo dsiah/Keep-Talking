@@ -13,6 +13,7 @@ function setScreen() {
 }
 
 function begin() {
+	$('#stopbtn').css('display', '');
 	this.style.display = 'none';
 	setScreen();
 	startTimer();
@@ -20,18 +21,30 @@ function begin() {
 
 function startTimer() {
 	gmodel.timer = new Date();
-	setInterval(changeTime, 1000);
+	gmodel.clock = setInterval(changeTime, 1000);
+}
+
+function stopTimer() {
+	clearInterval(gmodel.clock);
 }
 
 function changeTime() {
 	var delta = Math.round((new Date() - gmodel.timer) / 1000);
-	document.getElementById('watch').innerText = delta;	
+	if (gmodel.toppy - delta < 0) {
+		clearInterval(gmodel.clock)
+		$('body').css('background', '-webkit-gradient(linear, left top, left bottom, from(#fff), to(#f00)) fixed');
+		$('#Timer').innerHTML('GAME OVER, you blew it!');
+		return
+	}
+	document.getElementById('watch').innerText = gmodel.toppy - delta;
+
 }
 
 // Game State
 var gmodel  = { 
 	screen: 1, 
 	timer: null, 
+	toppy: 300,
 	game1win: null, 
 	game2win: null, 
 	game3win: null 
@@ -46,5 +59,7 @@ document.getElementById('Start-Game').addEventListener('click', begin);
 for (var i = 0; i < btns.length; i++) {
 	btns[i].addEventListener('click', setScreen);
 }
+
+$('#stopbtn').on('click', stopTimer);
 
 wipe();

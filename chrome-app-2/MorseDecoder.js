@@ -6,7 +6,3 @@ $('.sendit').click(function() {
 	involtSendString(pin_num, word_code);
 	$(this).pinDefine("P10").sendValue();
 });
-
-//  Play game
-
-// Read Serial response
